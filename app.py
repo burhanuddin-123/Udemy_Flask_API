@@ -17,10 +17,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'jose'
 api = Api(app)
 
-# create tables
-@app.before_first_request
-def create_tables():
-    db.create_all()
 
 # app.config['JWT_AUTH_URL_RULE'] = '/login'  # will change the url from /auth to /login, as by default it is /auth
 jwt = JWT(app, authenticate, identity)
