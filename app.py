@@ -2,6 +2,7 @@ from flask import Flask
 from flask.templating import render_template
 from flask_restful import Api
 from flask_jwt import JWT
+from db import db
 
 from security import authenticate, identity # 2 function of security.py
 from resources.user import UserRegister
